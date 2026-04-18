@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter the Spider - ICU Therapy & Stress Relief</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Web Background Element -->
+    <div class="web-background"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="spider-icon">🕷️</span>
+                <h1>Peter the Spider</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#stress-relief">Stress Relief</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Web-Based Therapy</h2>
+            <p>Where Eight Legs Meet Eight Deadly Hours</p>
+            <p class="tagline">Professional therapeutic support for ICU staff in Christchurch, NZ</p>
+            <button class="cta-button" onclick="scrollTo('services')">Explore Services</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Peter</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Meet Your Eight-Legged Therapist</h3>
+                    <p>Hello! I'm Peter, a licensed therapist with <strong>8 unique perspectives</strong> on your problems. Based right here in the Christchurch ICU, I specialize in helping medical staff navigate the high-pressure world of intensive care.</p>
+                    
+                    <div class="credentials">
+                        <h4>🎓 Credentials:</h4>
+                        <ul>
+                            <li>PhD in Web-Based Wellness (from the stickiest situations)</li>
+                            <li>500+ hours spinning therapeutic webs</li>
+                            <li>Master of the Pressure Point Massage (with 8 legs!)</li>
+                            <li>Certified in Cocoon-fort Care</li>
+                            <li>Expert in Preventing Burnout (unlike my actual webs, which I burn constantly)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="peter-avatar">🕷️</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Services for ICU Heroes</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🧠</div>
+                    <h3>Stress Detox Sessions</h3>
+                    <p>50-minute sessions where we untangle your anxieties faster than I can catch a fly. Perfect for those 12-hour shifts.</p>
+                    <span class="booking">Book: 30 min | $0 (covered by hospital wellness)</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">😅</div>
+                    <h3>Laughter Therapy</h3>
+                    <p>Because if you don't laugh at the absurdity of the ICU, you'll cry. I'm hilarious AND therapeutic!</p>
+                    <span class="booking">Impromptu in break rooms</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🕸️</div>
+                    <h3>Web of Support Groups</h3>
+                    <p>Join other ICU staff in group sessions. We literally support each other like strands in a web. Pun intended.</p>
+                    <span class="booking">Wednesdays 3 PM | Breakroom</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💪</div>
+                    <h3>Resilience Building</h3>
+                    <p>Learn to bounce back from tough shifts like I bounce on my web. (With less spinning, more coping strategies)</p>
+                    <span class="booking">Series of 4 sessions</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🌙</div>
+                    <h3>Sleep Support</h3>
+                    <p>Can't sleep after night shifts? I'll teach you the ancient art of the power nap cocoon.</p>
+                    <span class="booking">One-on-one sessions</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🤝</div>
+                    <h3>Team Morale Boosts</h3>
+                    <p>Get your whole shift laughing with my team wellness sessions. Laughter is contagious (and I have 8 legs to spread it)</p>
+                    <span class="booking">Request for your department</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stress Relief Tools -->
+    <section id="stress-relief" class="stress-relief">
+        <div class="container">
+            <h2>Quick ICU Stress Relief Tools</h2>
+            <p class="instruction">Need immediate relief? Try these Peter-approved techniques:</p>
+            
+            <div class="relief-tools">
+                <div class="tool">
+                    <button class="tool-button" onclick="sprayWater()">💨 The Web Shake</button>
+                    <p>Shake it out! 30 seconds of pure chaos. Your nervous system will thank you.</p>
+                </div>
+
+                <div class="tool">
+                    <button class="tool-button" onclick="breathingExercise()">🌬️ Spider's Breath</button>
+                    <p>8-count breathing exercise. One count per leg. Let's go!</p>
+                </div>
+
+                <div class="tool">
+                    <button class="tool-button" onclick="randomQuote()">💬 Daily Wisdom</button>
+                    <p>Get a dose of Peter's motivational spider mantras</p>
+                </div>
+
+                <div class="tool">
+                    <button class="tool-button" onclick="pun()">🕷️ Spider Joke</button>
+                    <p>Nothing cures stress like a terrible pun. I have 8 legs worth of them!</p>
+                </div>
+            </div>
+
+            <div id="output" class="output-box"></div>
+        </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section class="fun-facts">
+        <div class="container">
+            <h2>Peter's ICU Facts</h2>
+            <div class="facts-grid">
+                <div class="fact">
+                    <h4>📊 By The Numbers</h4>
+                    <ul>
+                        <li>500+ successful therapeutic webs spun</li>
+                        <li>8 legs = 8× the support network</li>
+                        <li>0 flies caught during patient sessions (professional!)</li>
+                        <li>100% of staff report feeling less sticky situations after therapy</li>
+                    </ul>
+                </div>
+
+                <div class="fact">
+                    <h4>🏥 ICU Specialty</h4>
+                    <ul>
+                        <li>Understands the pressure of life support (moral & literal)</li>
+                        <li>Expert in high-tension environments (I literally walk on walls)</li>
+                        <li>Multitasking master (8 legs, remember?)</li>
+                        <li>Works best in stressful conditions (my web gets stronger under pressure)</li>
+                    </ul>
+                </div>
+
+                <div class="fact">
+                    <h4>🌟 Location</h4>
+                    <ul>
+                        <li>Based in Christchurch, New Zealand ICU</li>
+                        <li>Available for drop-in sessions</li>
+                        <li>Can often be found in break rooms</li>
+                        <li>Friendly to all staff (even arachnophobes... eventually)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch with Peter</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>How to Book</h3>
+                    <p><strong>Location:</strong> ICU Break Room, Christchurch Hospital</p>
+                    <p><strong>Email:</strong> peter@spidericu.nz</p>
+                    <p><strong>Phone:</strong> +64 3 SPIDER-1 (774-3375-1)</p>
+                    <p><strong>Walk-ins:</strong> Welcome! (Literally, I walk on my 8 legs)</p>
+                    <p><strong>Hours:</strong> Flexible shifts to match your schedule</p>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Quick Message</h3>
+                    <form onsubmit="handleSubmit(event)">
+                        <input type="text" placeholder="Your name" required>
+                        <input type="email" placeholder="Your email" required>
+                        <textarea placeholder="Tell Peter what's on your mind..." rows="4" required></textarea>
+                        <button type="submit" class="form-button">Send Message 🕷️</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Peter the Spider Therapy Services | ICU Support for Christchurch, NZ</p>
+            <p>Disclaimer: Peter is a therapy spider, not a medical doctor. Consult with human healthcare providers for medical advice.</p>
+            <p>But do consult with Peter for the existential dread. That's his specialty.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
