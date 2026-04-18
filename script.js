@@ -45,7 +45,9 @@ const spiderJokes = [
     "Why is Peter the spider so good at his job? He knows how to create a strong support web! 🕸️",
     "Peter's favorite ICU shift? When there's literally nothing catching (well, except anxiety)! 🕷️",
     "What do you call a spider therapist? A web-being specialist! 👨‍⚕️",
-    "Peter's life hack: 8 legs = standing on 2 at a time during therapy = comfort! 🕷️"
+    "Peter's life hack: 8 legs = standing on 2 at a time during therapy = comfort! 🕷️",
+    "How is Peter different from Harry the Burwood Cat? Peter actually helps people! Harry just naps. Peter wins. 🕷️🬹",
+    "Peter's boast: While Harry the Burwood Cat sleeps, Peter's out here saving lives and minds. That's called work ethic. 🕷️"
 ];
 
 // Breathing exercise

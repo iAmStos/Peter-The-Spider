@@ -5,14 +5,14 @@
 
 :root {
     --spider-black: #1a1a1a;
-    --spider-dark-red: #8B0000;
-    --spider-red: #DC143C;
-    --spider-orange: #FF8C00;
-    --spider-brown: #654321;
+    --spider-dark-red: #003d7a;
+    --spider-red: #0066CC;
+    --spider-orange: #00B4D8;
+    --spider-brown: #0a2d5c;
     --spider-gray: #2a2a2a;
     --spider-light: #f5f5f5;
     --spider-white: #ffffff;
-    --accent-gold: #FFD700;
+    --accent-gold: #00D9FF;
 }
 
 /* ============================================
@@ -53,8 +53,8 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(139, 0, 0, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 140, 0, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(0, 61, 122, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 180, 216, 0.1) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
 }
@@ -70,7 +70,7 @@ body {
     top: 0;
     z-index: 100;
     border-bottom: 3px solid var(--spider-red);
-    box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
 }
 
 .navbar .container {
@@ -186,13 +186,13 @@ body {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4);
 }
 
 .cta-button:hover {
     background: var(--accent-gold);
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.6);
+    box-shadow: 0 6px 20px rgba(0, 180, 216, 0.6);
 }
 
 /* ============================================
@@ -233,7 +233,7 @@ body {
 }
 
 .credentials {
-    background: rgba(220, 20, 60, 0.1);
+    background: rgba(0, 102, 204, 0.1);
     padding: 20px;
     border-left: 4px solid var(--spider-red);
     border-radius: 5px;
@@ -265,7 +265,7 @@ body {
     font-size: 120px;
     text-align: center;
     animation: bounce 2s ease-in-out infinite;
-    filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.4));
+    filter: drop-shadow(0 0 20px rgba(0, 180, 216, 0.4));
 }
 
 @keyframes bounce {
@@ -297,7 +297,7 @@ body {
 }
 
 .service-card {
-    background: linear-gradient(135deg, var(--spider-gray) 0%, rgba(139, 0, 0, 0.2) 100%);
+    background: linear-gradient(135deg, var(--spider-gray) 0%, rgba(0, 61, 122, 0.2) 100%);
     padding: 30px;
     border-radius: 10px;
     border: 2px solid var(--spider-red);
@@ -307,7 +307,7 @@ body {
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(220, 20, 60, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.4);
     border-color: var(--spider-orange);
 }
 
@@ -332,7 +332,7 @@ body {
 
 .booking {
     display: inline-block;
-    background: rgba(220, 20, 60, 0.2);
+    background: rgba(0, 102, 204, 0.2);
     color: var(--accent-gold);
     padding: 8px 12px;
     border-radius: 20px;
@@ -372,7 +372,7 @@ body {
 }
 
 .tool {
-    background: rgba(139, 0, 0, 0.2);
+    background: rgba(0, 61, 122, 0.2);
     padding: 20px;
     border-radius: 10px;
     border: 2px solid var(--spider-orange);
@@ -395,7 +395,7 @@ body {
 .tool-button:hover {
     background: var(--accent-gold);
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 180, 216, 0.5);
 }
 
 .tool p {
@@ -443,7 +443,7 @@ body {
 }
 
 .fact {
-    background: linear-gradient(135deg, var(--spider-gray) 0%, rgba(220, 20, 60, 0.15) 100%);
+    background: linear-gradient(135deg, var(--spider-gray) 0%, rgba(0, 102, 204, 0.15) 100%);
     padding: 30px;
     border-radius: 10px;
     border: 2px solid var(--spider-red);
@@ -492,7 +492,7 @@ body {
 
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 50px;
 }
 
@@ -509,54 +509,6 @@ body {
     line-height: 1.8;
 }
 
-.contact-form {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 30px;
-    border-radius: 10px;
-    border: 2px solid rgba(255, 215, 0, 0.3);
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid var(--spider-orange);
-    border-radius: 5px;
-    color: var(--spider-light);
-    font-family: inherit;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--accent-gold);
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-}
-
-.form-button {
-    width: 100%;
-    background: var(--spider-orange);
-    color: var(--spider-black);
-    padding: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.form-button:hover {
-    background: var(--accent-gold);
-    transform: scale(1.02);
-}
 
 /* ============================================
    Footer
