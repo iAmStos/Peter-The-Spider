@@ -1,5 +1,26 @@
 // Peter the Spider - JavaScript Interactivity
 
+// Track active timeouts and intervals
+let activeTimeout = null;
+let activeInterval = null;
+
+// Function to cancel any active animations/operations
+function cancelActiveOperation() {
+    if (activeTimeout) {
+        clearTimeout(activeTimeout);
+        activeTimeout = null;
+    }
+    if (activeInterval) {
+        clearInterval(activeInterval);
+        activeInterval = null;
+    }
+    document.body.style.animation = 'none';
+    const output = document.getElementById('output');
+    if (output) {
+        output.classList.remove('active');
+    }
+}
+
 // Quotes for daily wisdom
 const peterQuotes = [
     "Remember: 8 legs = 8 times the support. You're not alone in this web of medicine.",
@@ -29,6 +50,8 @@ const spiderJokes = [
 
 // Breathing exercise
 function breathingExercise() {
+    cancelActiveOperation();
+    
     const output = document.getElementById('output');
     output.classList.add('active');
     output.innerHTML = '🌬️ Get ready for Spider\'s Breath!<br>Let\'s go through 8 counts (one per leg)...';
@@ -46,18 +69,21 @@ function breathingExercise() {
     ];
     
     let index = 0;
-    const interval = setInterval(() => {
+    activeInterval = setInterval(() => {
         if (index < instructions.length) {
             output.innerHTML = instructions[index];
             index++;
         } else {
-            clearInterval(interval);
+            clearInterval(activeInterval);
+            activeInterval = null;
         }
     }, 1500);
 }
 
 // Web shake animation
 function sprayWater() {
+    cancelActiveOperation();
+    
     const output = document.getElementById('output');
     output.classList.add('active');
     output.innerHTML = '💨 SHAKE IT OUT FOR 30 SECONDS! 💨<br>Let your whole body move!';
@@ -65,11 +91,13 @@ function sprayWater() {
     // Add shake animation to body (30 seconds of continuous shaking)
     document.body.style.animation = 'global-shake 0.5s infinite';
     
-    setTimeout(() => {
+    activeTimeout = setTimeout(() => {
         document.body.style.animation = 'none';
+        activeTimeout = null;
         output.innerHTML = '✅ Phew! Stress shaken off!<br>Feel better? You should!';
-        setTimeout(() => {
+        activeTimeout = setTimeout(() => {
             output.classList.remove('active');
+            activeTimeout = null;
         }, 2000);
     }, 30000);
 }
@@ -94,25 +122,31 @@ document.head.appendChild(style);
 
 // Random quote display
 function randomQuote() {
+    cancelActiveOperation();
+    
     const output = document.getElementById('output');
     output.classList.add('active');
     const quote = peterQuotes[Math.floor(Math.random() * peterQuotes.length)];
     output.innerHTML = '💭 Peter says:<br>' + quote;
     
-    setTimeout(() => {
+    activeTimeout = setTimeout(() => {
         output.classList.remove('active');
+        activeTimeout = null;
     }, 5000);
 }
 
 // Random joke/pun
 function pun() {
+    cancelActiveOperation();
+    
     const output = document.getElementById('output');
     output.classList.add('active');
     const joke = spiderJokes[Math.floor(Math.random() * spiderJokes.length)];
     output.innerHTML = joke;
     
-    setTimeout(() => {
+    activeTimeout = setTimeout(() => {
         output.classList.remove('active');
+        activeTimeout = null;
     }, 5000);
 }
 
